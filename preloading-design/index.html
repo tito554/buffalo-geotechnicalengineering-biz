@@ -116,6 +116,42 @@ header.hero, .hero { position: relative !important; }
 .leaflet-control { z-index: 800 !important; }
 .leaflet-container { z-index: 1 !important; }
 </style>
+<style id="inline-link-style">
+p a[href^="/"]:not(.cta-btn):not(.hero-cta){color:var(--accent,#1B4965) !important;text-decoration:underline !important;text-decoration-color:rgba(29,78,216,.45);text-underline-offset:2px;font-weight:600}
+p a[href^="/"]:not(.cta-btn):not(.hero-cta):hover{text-decoration-color:currentColor;opacity:.85}
+</style>
+<style id="navbar-compact-fix">
+/* Compactar navbar para que el menú entre completo */
+.navbar{padding:.65rem 1rem !important}
+.navbar .nav{gap:.55rem !important}
+.nav-item{font-size:.74rem !important;letter-spacing:.01em !important}
+.nav-item.has-dd .nav-cat-link{padding:.4rem .25rem !important}
+.nav-item.has-dd .nav-arrow{font-size:.7rem !important;margin-left:.15rem !important}
+.cta-btn{padding:.45rem .8rem !important;font-size:.72rem !important;letter-spacing:.03em !important}
+.logo-box,.brand-name,.brand{font-size:.82rem !important}
+.logo-text .main{font-size:.95rem !important}
+.logo-text .sub{font-size:.72rem !important}
+/* Para layouts aberdeen/classic con clase distinta */
+header nav a,.menu a{font-size:.78rem !important}
+@media (max-width:1100px){
+  .nav-item{font-size:.7rem !important}
+  .navbar .nav{gap:.4rem !important}
+  .cta-btn{padding:.4rem .65rem !important;font-size:.68rem !important}
+}
+</style>
+<style id="layout-defensive">
+html,body{overflow-x:hidden;max-width:100vw}
+body>*{max-width:100vw}
+@media (min-width:901px){
+  aside{position:relative}
+  aside+main,aside~main,aside~div>main{margin-left:0}
+  .content-area{display:flex;gap:1rem}
+}
+@media (max-width:900px){
+  aside{width:100% !important;position:static !important;height:auto !important}
+  .navbar{flex-wrap:wrap}
+}
+</style>
 </head><body>
 
 <header class="header">
@@ -144,7 +180,7 @@ header.hero, .hero { position: relative !important; }
 
         <h2>Method and coverage</h2><div>Buffalo sits on the former Lake Warren shoreline, meaning much of the city's subgrade consists of varved clays with interbedded silts. These soils typically show compression indices (Cc) between 0.25 and 0.45 and pre-consolidation pressures around 0.5 to 1.2 kg/cm². For a preloading design without surcharge, we rely on accurate consolidation testing per ASTM D2435 and careful estimation of secondary compression. The city's freeze-thaw cycles also affect drainage layer performance, so we include <a href="../geotechnical-drainage-design/">drenaje-geotecnico</a> calculations to prevent ice lens formation beneath the fill. Our typical sequence involves: <ul><li>Site characterization with Shelby tube sampling at 5-foot intervals</li><li>CRS consolidation tests on key strata</li><li>Terzaghi 1-D consolidation analysis with Casagrande construction</li><li>Field verification via settlement plates and vibrating wire piezometers</li></ul> This phased approach ensures the preloading design without surcharge achieves the target 90% primary consolidation within the construction window, even during Buffalo's short summer season.</div>
         <figure style="margin:1.5rem auto;max-width:60%;border-radius:6px;overflow:hidden;border:1px solid #E5E5E5"></figure>
-        <h2>Regional considerations</h2><p>ASCE 7-16 requires geotechnical investigation for any structure on compressible soils, and Buffalo's clay deposits are classified as Site Class D or E under the IBC. The main risk in a preloading design without surcharge is underestimating the time needed for consolidation. We have seen projects where secondary compression (creep) added 30% more settlement than predicted, especially in the organic-rich silt layers near the lake plain. Using a preloading design without surcharge means you cannot accelerate consolidation by increasing load, so drainage path length and cv values become critical. Our laboratory always runs at least three consolidation stages on representative samples to capture the non-linear behavior of Buffalo's overconsolidated crust and the softer underlying clay.</p>
+        <h2>Regional considerations</h2><p>ASCE 7-16 requires geotechnical investigation for any structure on compressible soils, and Buffalo's clay deposits are classified as Site Class D or E under the IBC. The main risk in a preloading design without surcharge is underestimating the time needed for consolidation. We have seen projects where secondary compression (creep) added 30% more settlement than predicted, especially in the organic-rich silt layers near the lake plain. Using a preloading design without surcharge means you cannot accelerate consolidation by increasing load, so drainage path length and cv values become critical. Our <a href="/laboratory/">laboratory</a> always runs at least three consolidation stages on representative samples to capture the non-linear behavior of Buffalo's overconsolidated crust and the softer underlying clay.</p>
 
         
     <section class="block mid-cta-2d1f-2d1f" style="padding:2rem 0">
