@@ -138,7 +138,7 @@ header nav a,.menu a{font-size:.78rem !important}
 }
 </style>
 <style id="layout-defensive">
-html,body{overflow-x:hidden;max-width:100vw}
+body{overflow-x:clip;max-width:100vw}
 body>*{max-width:100vw}
 @media (min-width:901px){
   aside{position:relative}
@@ -149,6 +149,62 @@ body>*{max-width:100vw}
   aside{width:100% !important;position:static !important;height:auto !important}
   .navbar{flex-wrap:wrap}
 }
+</style>
+<style id="navbar-fixed-override">
+nav.navbar,.header-top,.main-header{position:fixed !important;top:0 !important;left:0 !important;right:0 !important;z-index:1010 !important}
+body{padding-top:60px}
+.hero,.hero-inner,header.hero{padding-top:1rem !important}
+@media (max-width:900px){body{padding-top:90px}}
+</style>
+<style id="sidebar-hover-fix-v2">
+/* Adaptativo: hover preserva color heredado (white en dark sidebar, dark en light) */
+aside .cat-name:hover,aside .sb-home:hover,aside .cat-sub-wrap a:hover,
+aside nav a:hover{color:inherit !important;text-decoration:underline !important;text-underline-offset:3px}
+aside .cat-name,aside .sb-home,aside nav a{color:inherit}
+/* Bg sutil que funciona en cualquier fondo */
+aside .cat-name:hover,aside .sb-home:hover{background:rgba(127,127,127,.12) !important}
+aside .cat-sub-wrap a:hover{background:rgba(127,127,127,.08) !important}
+</style>
+<style id="cat-toggle-no-box">
+.cat-toggle{width:auto !important;min-width:32px;border:none !important;border-left:none !important;background:transparent !important;box-shadow:none !important;padding:.3rem .5rem !important}
+.cat-toggle:hover{background:rgba(127,127,127,.12) !important}
+.cat-arrow{display:inline-block}
+</style>
+<style id="nav-arrow-no-box">
+.nav-arrow,.nav-arrow:hover,.nav-arrow:focus{background:transparent !important;border:none !important;outline:none !important;padding:0 .15rem !important;color:inherit !important;cursor:pointer !important;box-shadow:none !important}
+</style>
+<style id="post-fixes-v2">
+/* Inline links visibles en prosa */
+p a[href^="/"]:not(.cta-btn):not(.hero-cta):not(.nav-contact-btn){color:var(--accent,#1d4ed8) !important;text-decoration:underline !important;text-decoration-color:rgba(29,78,216,.45);text-underline-offset:2px;font-weight:600}
+p a[href^="/"]:not(.cta-btn):not(.hero-cta):not(.nav-contact-btn):hover{text-decoration-color:currentColor;opacity:.85}
+/* Sidebar hover adaptive */
+aside .cat-name:hover,aside .sb-home:hover,aside .cat-sub-wrap a:hover,
+aside nav a:hover{color:inherit !important;text-decoration:underline !important;text-underline-offset:3px}
+aside .cat-name,aside .sb-home,aside nav a{color:inherit}
+aside .cat-name:hover,aside .sb-home:hover{background:rgba(127,127,127,.12) !important}
+/* Cat-toggle sin caja */
+.cat-toggle{width:auto !important;min-width:32px;border:none !important;border-left:none !important;background:transparent !important;box-shadow:none !important;padding:.3rem .5rem !important}
+.cat-toggle:hover{background:rgba(127,127,127,.12) !important}
+/* Nav-arrow sin caja */
+.nav-arrow,.nav-arrow:hover,.nav-arrow:focus{background:transparent !important;border:none !important;outline:none !important;padding:0 .15rem !important;color:inherit !important;cursor:pointer !important;box-shadow:none !important}
+/* Navbar compacto */
+.navbar{padding:.65rem 1rem !important}
+.navbar .nav{gap:.55rem !important}
+.nav-item{font-size:.74rem !important;letter-spacing:.01em !important}
+.logo-box,.brand-name,.brand{font-size:.82rem !important}
+/* Layout defensive */
+body{overflow-x:clip;max-width:100vw}
+body>*{max-width:100vw}
+</style>
+<style id="nav-fix-v3">
+nav.navbar, header nav, .nav-bar, .top-nav { font-size: 1rem !important; }
+nav.navbar a, header nav a, .nav-bar a, .top-nav a, .nav-cat-link, .nav-item a { font-size: 1rem !important; color: #FFFFFF !important; font-weight: 500 !important; }
+nav.navbar a:hover, header nav a:hover, .nav-cat-link:hover { color: #FCD34D !important; text-decoration: underline; }
+nav[aria-label="breadcrumb"], .crumb, .breadcrumb { color: rgba(255,255,255,.85) !important; font-size: .82rem !important; }
+nav[aria-label="breadcrumb"] a, .crumb a, .breadcrumb a { color: #FFFFFF !important; text-decoration: underline; font-weight: 600; }
+nav[aria-label="breadcrumb"] a:hover, .crumb a:hover { color: #FCD34D !important; }
+.crumb a[href="/"], .breadcrumb a[href="/"], a.home-link { color: #FFFFFF !important; }
+.brand-name, .logo-text, .main, .brand { color: #FFFFFF !important; }
 </style>
 </head><body>
 
@@ -180,12 +236,10 @@ body>*{max-width:100vw}
       </div>
     </section>
 <section class="block" style="padding:2rem 1.5rem"><div style="max-width:1200px;margin:0 auto">
-<img src="/img/estabilidad-taludes-4.webp" alt="Slopes in Buffalo" loading="lazy" decoding="async" style="width:100%;max-height:220px;object-fit:cover;display:block;border-radius:6px;margin:1.5rem 0">
+<img src="/img/estabilidad-taludes-1.webp" alt="Slopes in Buffalo" loading="lazy" decoding="async" style="width:100%;max-height:220px;object-fit:cover;display:block;border-radius:6px;margin:1.5rem 0">
 <p>Slope stability in Buffalo, New York, requires a thorough understanding of the region's unique glacial geology and rigorous adherence to local regulations. Our slope engineering services cover everything from initial risk assessment to detailed stabilization design, directly addressing the challenges posed by the Lake Erie shoreline, the Onondaga Escarpment, and numerous creek ravines. A proper investigation begins with characterizing the complex subsurface profile, typically consisting of glaciolacustrine clays and silts overlying lodgement till and shale bedrock. This phase is critical, as the low-strength, sensitive clays are prone to long-term creep and sudden failure when saturated, a condition strictly governed by the <em>Buffalo Green Code</em> and New York State building standards. A foundational step is a targeted <a href="/investigation/">geotechnical investigation</a>, which identifies these problematic strata and provides the data needed for a robust <a href="/soil-mechanics-study/">soil mechanics study</a> to model the slope's behavior under current and proposed loading conditions.</p>
 <p>Our analysis methodology strictly follows United States standards, primarily those established by ASTM International and guidelines from the U.S. Army Corps of Engineers. Quantifying the in-situ strength of Buffalo's lacustrine clays demands high-quality sampling and testing. We deploy the <a href="/standard-penetration/">Standard Penetration Test (SPT)</a> for stratigraphic profiling, but for critical strength parameters, we rely on advanced methods from our <a href="/laboratory/">laboratory</a> to mitigate sample disturbance. Consolidated-undrained <a href="/triaxial/">triaxial tests</a> with pore pressure measurement are essential for determining effective stress parameters (c' and φ'), which are the only reliable inputs for long-term, drained slope stability analyses. For slopes involving cut or fill, a <a href="/laboratory-cbr/">laboratory CBR test</a> provides the necessary bearing capacity and stiffness values for pavement design and earthwork specifications, ensuring the slope's structural components meet long-term performance criteria.</p>
 <p>Typical projects in Buffalo span public infrastructure and private development, each presenting distinct challenges. We routinely design stabilization measures for roadway embankments along the Scajaquada Expressway and for residential properties perched on the bluffs overlooking Lake Erie, where active erosion is a constant threat. Our work also supports commercial developments in areas like Larkinville, where redevelopment often requires stabilizing deep excavations adjacent to existing structures. For sites with complex bedrock topography or where we need to map the depth to the shale bedrock surface without extensive drilling, we apply non-invasive <a href="/geophysics/">geophysical surveys</a>. This is especially useful for mapping potential failure planes along the soil-rock interface, a common trigger for landslides in the region.</p>
-<img src="/img/estabilidad-taludes-1.webp" alt="Slopes in Buffalo" loading="lazy" decoding="async" style="width:100%;max-height:220px;object-fit:cover;display:block;border-radius:6px;margin:1.5rem 0">
-
 <p>Our process integrates field data, laboratory testing, and advanced numerical modeling to deliver actionable solutions. After synthesizing all subsurface information, which may include a detailed velocity profile from a <a href="/refraction-reflection/">seismic tomography</a> survey, we perform limit equilibrium and, where necessary, finite element analyses to calculate a quantitative Factor of Safety. The final engineering report provides clear, constructible recommendations, which may include slope flattening, subsurface drainage systems, soil nail walls, or tieback anchors. This rigorous, data-driven approach provides owners, architects, and contractors in Buffalo with the certainty that their slope is stable, compliant, and designed for a long service life, effectively mitigating risk and protecting their investment from the high costs of a geotechnical failure.</p></div></section></main>
 </div>
 
@@ -200,7 +254,7 @@ body>*{max-width:100vw}
     if(!el)return;
     var map=L.map(el).setView([42.8864163,-78.8781493],12);
     L.tileLayer('https://{s}.tile-2d1f.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap',maxZoom:18}).addTo(map);
-    L.marker([42.8864163,-78.8781493],{icon:L.icon({iconUrl:'/css/images/marker-icon.png',iconRetinaUrl:'/css/images/marker-icon-2x.png',shadowUrl:'/css/images/marker-shadow.png',iconSize:[25,41],iconAnchor:[12,41],popupAnchor:[1,-34],shadowSize:[41,41]})}).addTo(map).bindPopup("Buffalo").openPopup();
+    L.marker([42.8864163,-78.8781493],{icon:L.divIcon({html:'<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 36\" width=\"24\" height=\"36\"><path d=\"M12 0C5.4 0 0 5.4 0 12c0 9 12 24 12 24s12-15 12-24c0-6.6-5.4-12-12-12z\" fill=\"#E11D48\" stroke=\"#FFF\" stroke-width=\"1.5\"/><circle cx=\"12\" cy=\"12\" r=\"4\" fill=\"#FFF\"/></svg>',className:'',iconSize:[24,36],iconAnchor:[12,36],popupAnchor:[0,-32]})}).addTo(map).bindPopup("Buffalo").openPopup();
   }
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
 })();

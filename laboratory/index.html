@@ -138,7 +138,7 @@ header nav a,.menu a{font-size:.78rem !important}
 }
 </style>
 <style id="layout-defensive">
-html,body{overflow-x:hidden;max-width:100vw}
+body{overflow-x:clip;max-width:100vw}
 body>*{max-width:100vw}
 @media (min-width:901px){
   aside{position:relative}
@@ -149,6 +149,62 @@ body>*{max-width:100vw}
   aside{width:100% !important;position:static !important;height:auto !important}
   .navbar{flex-wrap:wrap}
 }
+</style>
+<style id="navbar-fixed-override">
+nav.navbar,.header-top,.main-header{position:fixed !important;top:0 !important;left:0 !important;right:0 !important;z-index:1010 !important}
+body{padding-top:60px}
+.hero,.hero-inner,header.hero{padding-top:1rem !important}
+@media (max-width:900px){body{padding-top:90px}}
+</style>
+<style id="sidebar-hover-fix-v2">
+/* Adaptativo: hover preserva color heredado (white en dark sidebar, dark en light) */
+aside .cat-name:hover,aside .sb-home:hover,aside .cat-sub-wrap a:hover,
+aside nav a:hover{color:inherit !important;text-decoration:underline !important;text-underline-offset:3px}
+aside .cat-name,aside .sb-home,aside nav a{color:inherit}
+/* Bg sutil que funciona en cualquier fondo */
+aside .cat-name:hover,aside .sb-home:hover{background:rgba(127,127,127,.12) !important}
+aside .cat-sub-wrap a:hover{background:rgba(127,127,127,.08) !important}
+</style>
+<style id="cat-toggle-no-box">
+.cat-toggle{width:auto !important;min-width:32px;border:none !important;border-left:none !important;background:transparent !important;box-shadow:none !important;padding:.3rem .5rem !important}
+.cat-toggle:hover{background:rgba(127,127,127,.12) !important}
+.cat-arrow{display:inline-block}
+</style>
+<style id="nav-arrow-no-box">
+.nav-arrow,.nav-arrow:hover,.nav-arrow:focus{background:transparent !important;border:none !important;outline:none !important;padding:0 .15rem !important;color:inherit !important;cursor:pointer !important;box-shadow:none !important}
+</style>
+<style id="post-fixes-v2">
+/* Inline links visibles en prosa */
+p a[href^="/"]:not(.cta-btn):not(.hero-cta):not(.nav-contact-btn){color:var(--accent,#1d4ed8) !important;text-decoration:underline !important;text-decoration-color:rgba(29,78,216,.45);text-underline-offset:2px;font-weight:600}
+p a[href^="/"]:not(.cta-btn):not(.hero-cta):not(.nav-contact-btn):hover{text-decoration-color:currentColor;opacity:.85}
+/* Sidebar hover adaptive */
+aside .cat-name:hover,aside .sb-home:hover,aside .cat-sub-wrap a:hover,
+aside nav a:hover{color:inherit !important;text-decoration:underline !important;text-underline-offset:3px}
+aside .cat-name,aside .sb-home,aside nav a{color:inherit}
+aside .cat-name:hover,aside .sb-home:hover{background:rgba(127,127,127,.12) !important}
+/* Cat-toggle sin caja */
+.cat-toggle{width:auto !important;min-width:32px;border:none !important;border-left:none !important;background:transparent !important;box-shadow:none !important;padding:.3rem .5rem !important}
+.cat-toggle:hover{background:rgba(127,127,127,.12) !important}
+/* Nav-arrow sin caja */
+.nav-arrow,.nav-arrow:hover,.nav-arrow:focus{background:transparent !important;border:none !important;outline:none !important;padding:0 .15rem !important;color:inherit !important;cursor:pointer !important;box-shadow:none !important}
+/* Navbar compacto */
+.navbar{padding:.65rem 1rem !important}
+.navbar .nav{gap:.55rem !important}
+.nav-item{font-size:.74rem !important;letter-spacing:.01em !important}
+.logo-box,.brand-name,.brand{font-size:.82rem !important}
+/* Layout defensive */
+body{overflow-x:clip;max-width:100vw}
+body>*{max-width:100vw}
+</style>
+<style id="nav-fix-v3">
+nav.navbar, header nav, .nav-bar, .top-nav { font-size: 1rem !important; }
+nav.navbar a, header nav a, .nav-bar a, .top-nav a, .nav-cat-link, .nav-item a { font-size: 1rem !important; color: #FFFFFF !important; font-weight: 500 !important; }
+nav.navbar a:hover, header nav a:hover, .nav-cat-link:hover { color: #FCD34D !important; text-decoration: underline; }
+nav[aria-label="breadcrumb"], .crumb, .breadcrumb { color: rgba(255,255,255,.85) !important; font-size: .82rem !important; }
+nav[aria-label="breadcrumb"] a, .crumb a, .breadcrumb a { color: #FFFFFF !important; text-decoration: underline; font-weight: 600; }
+nav[aria-label="breadcrumb"] a:hover, .crumb a:hover { color: #FCD34D !important; }
+.crumb a[href="/"], .breadcrumb a[href="/"], a.home-link { color: #FFFFFF !important; }
+.brand-name, .logo-text, .main, .brand { color: #FFFFFF !important; }
 </style>
 </head><body>
 
@@ -185,7 +241,7 @@ body>*{max-width:100vw}
 <p>Geotechnical laboratory testing in Buffalo provides the quantitative backbone for any subsurface exploration program, addressing the unique geological conditions of Western New York. The region’s Quaternary stratigraphy, dominated by glacial till, lacustrine clays, and outwash sands deposited by the retreat of the Wisconsin glaciation, creates highly variable ground conditions that demand rigorous physical characterization. Our laboratory services transform field samples obtained during an <a href="/investigation/">investigation</a> into precise engineering parameters, covering particle-size distribution, Atterberg limits, moisture-density relationships, and shear strength. All procedures strictly adhere to ASTM International standards and are calibrated to meet the requirements of the New York State Department of Transportation (NYSDOT) and the City of Buffalo code, ensuring that every data set supports defensible foundation design and earthwork specifications.</p>
 <p>Our Buffalo laboratory operates under a quality system aligned with ASTM D3740 for agencies engaged in testing soils and rock, employing methodologies that directly complement field index tests like the <a href="/standard-penetration/">SPT (Standard Penetration Test)</a>. Classification testing follows ASTM D2487 (Unified Soil Classification System) using washed sieve analysis and hydrometer methods per ASTM D7928 to capture the silt and clay fractions prevalent in the Buffalo lacustrine plain. Strength and compressibility are evaluated through advanced destructive testing, including unconsolidated-undrained and consolidated-undrained <a href="/triaxial/">triaxial test</a> protocols (ASTM D2850 and D4767), alongside incremental and constant-rate-of-strain consolidation tests (ASTM D2435 and D4186). For pavement and subgrade design in the Buffalo metropolitan area, the <a href="/laboratory-cbr/">laboratory CBR test</a> is performed in strict accordance with ASTM D1883, providing soaked California Bearing Ratio values essential for evaluating the bearing capacity of silty subgrade soils that are susceptible to softening during the spring thaw.</p>
 <p>Typical Buffalo projects that rely heavily on geotechnical laboratory data include deep excavations for mixed-use developments in the Canalside district, where stiff glacial till underlies compressible urban fill, and the rehabilitation of historic grain elevators along the Buffalo River, where foundation underpinning requires accurate <a href="/soil-mechanics-study/">soil mechanics study</a> results. Transportation infrastructure, such as the Kensington Expressway cap and the Buffalo Skyway reconstruction, demands laboratory-derived resilient modulus inputs for mechanistic-empirical pavement design. For renewable energy installations, including utility-scale solar farms on the former Bethlehem Steel site in Lackawanna, laboratory permeability tests (ASTM D5084) and chemical analyses of slag fill inform stormwater management and environmental containment strategies, ensuring that redevelopment proceeds safely on challenging industrial legacy soils.</p>
-<img src="/img/permeabilidad-laboratorio-1.webp" alt="Laboratory in Buffalo" loading="lazy" decoding="async" style="width:100%;max-height:220px;object-fit:cover;display:block;border-radius:6px;margin:1.5rem 0">
+<img src="/img/ensayo-triaxial-4.webp" alt="Laboratory in Buffalo" loading="lazy" decoding="async" style="width:100%;max-height:220px;object-fit:cover;display:block;border-radius:6px;margin:1.5rem 0">
 
 <p>The laboratory process begins with chain-of-custody logging of Shelby tube or split-spoon samples delivered from the drill rig, followed by photographic documentation and specimen extrusion in our humidity-controlled environment. Clients receive a comprehensive geotechnical data report containing tabulated index and engineering properties, stress-strain curves from strength testing, e-log p’ consolidation curves, and a clear summary of interpreted parameters—effective friction angle, cohesion, preconsolidation pressure, and compression indices—ready for direct input into finite element or limit equilibrium models. This integration of field exploration with high-level laboratory analysis delivers a defensible geotechnical baseline, reducing uncertainty in foundation design and mitigating the risk of costly change orders during construction in Buffalo’s notoriously variable subsurface environment.</p></div></section></main>
 </div>
@@ -201,7 +257,7 @@ body>*{max-width:100vw}
     if(!el)return;
     var map=L.map(el).setView([42.8864163,-78.8781493],12);
     L.tileLayer('https://{s}.tile-2d1f.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap',maxZoom:18}).addTo(map);
-    L.marker([42.8864163,-78.8781493],{icon:L.icon({iconUrl:'/css/images/marker-icon.png',iconRetinaUrl:'/css/images/marker-icon-2x.png',shadowUrl:'/css/images/marker-shadow.png',iconSize:[25,41],iconAnchor:[12,41],popupAnchor:[1,-34],shadowSize:[41,41]})}).addTo(map).bindPopup("Buffalo").openPopup();
+    L.marker([42.8864163,-78.8781493],{icon:L.divIcon({html:'<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 36\" width=\"24\" height=\"36\"><path d=\"M12 0C5.4 0 0 5.4 0 12c0 9 12 24 12 24s12-15 12-24c0-6.6-5.4-12-12-12z\" fill=\"#E11D48\" stroke=\"#FFF\" stroke-width=\"1.5\"/><circle cx=\"12\" cy=\"12\" r=\"4\" fill=\"#FFF\"/></svg>',className:'',iconSize:[24,36],iconAnchor:[12,36],popupAnchor:[0,-32]})}).addTo(map).bindPopup("Buffalo").openPopup();
   }
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
 })();

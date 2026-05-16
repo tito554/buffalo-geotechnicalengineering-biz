@@ -138,7 +138,7 @@ header nav a,.menu a{font-size:.78rem !important}
 }
 </style>
 <style id="layout-defensive">
-html,body{overflow-x:hidden;max-width:100vw}
+body{overflow-x:clip;max-width:100vw}
 body>*{max-width:100vw}
 @media (min-width:901px){
   aside{position:relative}
@@ -149,6 +149,62 @@ body>*{max-width:100vw}
   aside{width:100% !important;position:static !important;height:auto !important}
   .navbar{flex-wrap:wrap}
 }
+</style>
+<style id="navbar-fixed-override">
+nav.navbar,.header-top,.main-header{position:fixed !important;top:0 !important;left:0 !important;right:0 !important;z-index:1010 !important}
+body{padding-top:60px}
+.hero,.hero-inner,header.hero{padding-top:1rem !important}
+@media (max-width:900px){body{padding-top:90px}}
+</style>
+<style id="sidebar-hover-fix-v2">
+/* Adaptativo: hover preserva color heredado (white en dark sidebar, dark en light) */
+aside .cat-name:hover,aside .sb-home:hover,aside .cat-sub-wrap a:hover,
+aside nav a:hover{color:inherit !important;text-decoration:underline !important;text-underline-offset:3px}
+aside .cat-name,aside .sb-home,aside nav a{color:inherit}
+/* Bg sutil que funciona en cualquier fondo */
+aside .cat-name:hover,aside .sb-home:hover{background:rgba(127,127,127,.12) !important}
+aside .cat-sub-wrap a:hover{background:rgba(127,127,127,.08) !important}
+</style>
+<style id="cat-toggle-no-box">
+.cat-toggle{width:auto !important;min-width:32px;border:none !important;border-left:none !important;background:transparent !important;box-shadow:none !important;padding:.3rem .5rem !important}
+.cat-toggle:hover{background:rgba(127,127,127,.12) !important}
+.cat-arrow{display:inline-block}
+</style>
+<style id="nav-arrow-no-box">
+.nav-arrow,.nav-arrow:hover,.nav-arrow:focus{background:transparent !important;border:none !important;outline:none !important;padding:0 .15rem !important;color:inherit !important;cursor:pointer !important;box-shadow:none !important}
+</style>
+<style id="post-fixes-v2">
+/* Inline links visibles en prosa */
+p a[href^="/"]:not(.cta-btn):not(.hero-cta):not(.nav-contact-btn){color:var(--accent,#1d4ed8) !important;text-decoration:underline !important;text-decoration-color:rgba(29,78,216,.45);text-underline-offset:2px;font-weight:600}
+p a[href^="/"]:not(.cta-btn):not(.hero-cta):not(.nav-contact-btn):hover{text-decoration-color:currentColor;opacity:.85}
+/* Sidebar hover adaptive */
+aside .cat-name:hover,aside .sb-home:hover,aside .cat-sub-wrap a:hover,
+aside nav a:hover{color:inherit !important;text-decoration:underline !important;text-underline-offset:3px}
+aside .cat-name,aside .sb-home,aside nav a{color:inherit}
+aside .cat-name:hover,aside .sb-home:hover{background:rgba(127,127,127,.12) !important}
+/* Cat-toggle sin caja */
+.cat-toggle{width:auto !important;min-width:32px;border:none !important;border-left:none !important;background:transparent !important;box-shadow:none !important;padding:.3rem .5rem !important}
+.cat-toggle:hover{background:rgba(127,127,127,.12) !important}
+/* Nav-arrow sin caja */
+.nav-arrow,.nav-arrow:hover,.nav-arrow:focus{background:transparent !important;border:none !important;outline:none !important;padding:0 .15rem !important;color:inherit !important;cursor:pointer !important;box-shadow:none !important}
+/* Navbar compacto */
+.navbar{padding:.65rem 1rem !important}
+.navbar .nav{gap:.55rem !important}
+.nav-item{font-size:.74rem !important;letter-spacing:.01em !important}
+.logo-box,.brand-name,.brand{font-size:.82rem !important}
+/* Layout defensive */
+body{overflow-x:clip;max-width:100vw}
+body>*{max-width:100vw}
+</style>
+<style id="nav-fix-v3">
+nav.navbar, header nav, .nav-bar, .top-nav { font-size: 1rem !important; }
+nav.navbar a, header nav a, .nav-bar a, .top-nav a, .nav-cat-link, .nav-item a { font-size: 1rem !important; color: #FFFFFF !important; font-weight: 500 !important; }
+nav.navbar a:hover, header nav a:hover, .nav-cat-link:hover { color: #FCD34D !important; text-decoration: underline; }
+nav[aria-label="breadcrumb"], .crumb, .breadcrumb { color: rgba(255,255,255,.85) !important; font-size: .82rem !important; }
+nav[aria-label="breadcrumb"] a, .crumb a, .breadcrumb a { color: #FFFFFF !important; text-decoration: underline; font-weight: 600; }
+nav[aria-label="breadcrumb"] a:hover, .crumb a:hover { color: #FCD34D !important; }
+.crumb a[href="/"], .breadcrumb a[href="/"], a.home-link { color: #FFFFFF !important; }
+.brand-name, .logo-text, .main, .brand { color: #FFFFFF !important; }
 </style>
 </head><body>
 
@@ -181,12 +237,10 @@ body>*{max-width:100vw}
       </div>
     </section>
 <section class="block" style="padding:2rem 1.5rem"><div style="max-width:1200px;margin:0 auto">
-<img src="/img/columnas-grava-2.webp" alt="Improvement in Buffalo" loading="lazy" decoding="async" style="width:100%;max-height:220px;object-fit:cover;display:block;border-radius:6px;margin:1.5rem 0">
+<img src="/img/vibrocompactacion-1.webp" alt="Improvement in Buffalo" loading="lazy" decoding="async" style="width:100%;max-height:220px;object-fit:cover;display:block;border-radius:6px;margin:1.5rem 0">
 <p>Improvement in Buffalo addresses the challenge of constructing on the region’s variable glacial geology, where lacustrine clays, soft silts, and loose granular tills dominate the subsurface profile. These soil conditions, shaped by the advance and retreat of the Laurentide Ice Sheet, often exhibit low bearing capacity, high compressibility, and sensitivity to moisture changes. A thorough <a href="/investigation/">geotechnical investigation</a> is the essential first step, combining historical data with targeted field exploration to delineate the depth and extent of problematic strata. The regulatory framework typically references the New York State Building Code, which adopts IBC standards, while the City of Buffalo often requires compliance with its own grading and drainage ordinances for any site preparation involving fill placement or compaction.</p>
 <p>Selecting an appropriate Improvement methodology in the Buffalo area relies on rigorous In-Situ and laboratory analysis to meet performance-based standards set by ASTM and local jurisdiction guidelines. The <a href="/standard-penetration/">Standard Penetration Test (SPT)</a> provides critical N-value data for initial screening of loose sands or soft clays, directly informing the feasibility of densification methods like vibrocompaction or the need for rigid inclusions. When cohesive soils are encountered, a comprehensive <a href="/laboratory/">laboratory testing</a> program becomes indispensable, particularly a <a href="/laboratory-cbr/">laboratory CBR test</a> to assess subgrade strength for pavement design and a <a href="/triaxial/">triaxial test</a> to determine consolidated undrained shear strength parameters for stability analysis of embankments or deep foundations. These tests, calibrated to AASHTO and ASTM D4767/D2850 standards, provide the parameters necessary for designing Improvement that meets the 50-year service life expectations common in regional infrastructure.</p>
 <p>Typical Improvement projects in Buffalo span industrial redevelopment on the former Bethlehem Steel site in Lackawanna, where deep dynamic compaction has been used to stabilize heterogeneous fill, to commercial construction in the Buffalo Niagara Medical Campus dealing with compressible lake plain deposits. Infrastructure work often involves aggregate piers beneath bridge approaches for the I-190 corridor or cement deep soil mixing to support large-diameter sewers near the Buffalo River. A detailed <a href="/soil-mechanics-study/">soil mechanics study</a> is critical for these projects to model settlement behavior under the heavy cyclic loading from snowplows and freeze-thaw cycles, a signature geohazard in Western New York that can degrade untreated subgrades within a single winter season.</p>
-<img src="/img/vibrocompactacion-1.webp" alt="Improvement in Buffalo" loading="lazy" decoding="async" style="width:100%;max-height:220px;object-fit:cover;display:block;border-radius:6px;margin:1.5rem 0">
-
 <p>Our process integrates site-specific ground response data into a constructible design, beginning with field exploration and extending through quality control verification. Deliverables include a Improvement design report with stamped drawings, specifying material properties, installation sequences, and post-treatment verification testing such as cone penetration tests or plate load tests to confirm performance criteria. For sites with complex subsurface anomalies, we deploy <a href="/geophysics/">geophysical surveys</a>, including <a href="/refraction-reflection/">seismic tomography (refraction/reflection)</a>, to create high-resolution shear wave velocity profiles that map bedrock depth and identify potential obstructions without excessive probing. This data-centric approach reduces uncertainty, allowing contractors to bid accurately and owners to proceed with a warranted, cost-effective foundation solution that mitigates long-term maintenance risks.</p></div></section></main>
 </div>
 
@@ -201,7 +255,7 @@ body>*{max-width:100vw}
     if(!el)return;
     var map=L.map(el).setView([42.8864163,-78.8781493],12);
     L.tileLayer('https://{s}.tile-2d1f.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap',maxZoom:18}).addTo(map);
-    L.marker([42.8864163,-78.8781493],{icon:L.icon({iconUrl:'/css/images/marker-icon.png',iconRetinaUrl:'/css/images/marker-icon-2x.png',shadowUrl:'/css/images/marker-shadow.png',iconSize:[25,41],iconAnchor:[12,41],popupAnchor:[1,-34],shadowSize:[41,41]})}).addTo(map).bindPopup("Buffalo").openPopup();
+    L.marker([42.8864163,-78.8781493],{icon:L.divIcon({html:'<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 36\" width=\"24\" height=\"36\"><path d=\"M12 0C5.4 0 0 5.4 0 12c0 9 12 24 12 24s12-15 12-24c0-6.6-5.4-12-12-12z\" fill=\"#E11D48\" stroke=\"#FFF\" stroke-width=\"1.5\"/><circle cx=\"12\" cy=\"12\" r=\"4\" fill=\"#FFF\"/></svg>',className:'',iconSize:[24,36],iconAnchor:[12,36],popupAnchor:[0,-32]})}).addTo(map).bindPopup("Buffalo").openPopup();
   }
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
 })();
