@@ -2,136 +2,163 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap-0.9">
   <url>
     <loc>https://buffalo.geotechnicalengineering.biz/</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://buffalo.geotechnicalengineering.biz/bearing-capacity-analysis/</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://buffalo.geotechnicalengineering.biz/flexible-pavement-design/</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://buffalo.geotechnicalengineering.biz/foundations/</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://buffalo.geotechnicalengineering.biz/geophysics/</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://buffalo.geotechnicalengineering.biz/geotechnical-drainage-design/</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://buffalo.geotechnicalengineering.biz/geotechnical-road-drainage/</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://buffalo.geotechnicalengineering.biz/geotextile-specification/</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://buffalo.geotechnicalengineering.biz/ground-improvement/</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://buffalo.geotechnicalengineering.biz/investigation/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://buffalo.geotechnicalengineering.biz/laboratory-cbr/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://buffalo.geotechnicalengineering.biz/laboratory-permeability/</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://buffalo.geotechnicalengineering.biz/laboratory/</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://buffalo.geotechnicalengineering.biz/laboratory-cbr/</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://buffalo.geotechnicalengineering.biz/laboratory-permeability/</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://buffalo.geotechnicalengineering.biz/pile-skin-friction-vs/</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://buffalo.geotechnicalengineering.biz/preloading-design/</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://buffalo.geotechnicalengineering.biz/refraction-reflection/</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://buffalo.geotechnicalengineering.biz/retaining-wall-design/</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://buffalo.geotechnicalengineering.biz/road-geotechnics/</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://buffalo.geotechnicalengineering.biz/settlement-analysis/</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://buffalo.geotechnicalengineering.biz/shallow-foundation-design/</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://buffalo.geotechnicalengineering.biz/sheet-pile-wall-design/</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://buffalo.geotechnicalengineering.biz/slope-failure-analysis/</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://buffalo.geotechnicalengineering.biz/slope-stability-analysis/</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://buffalo.geotechnicalengineering.biz/slopes/</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://buffalo.geotechnicalengineering.biz/soil-mechanics-study/</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://buffalo.geotechnicalengineering.biz/standard-penetration/</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://buffalo.geotechnicalengineering.biz/triaxial/</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
